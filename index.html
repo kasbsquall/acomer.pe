@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acomer.pe</title>
+    <link rel="stylesheet" href="scss/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Cabecera superior -->
+    <header id="top-header">
+      <div class="container">
+        <div class="section-left subtitle-2">
+          Tu guía culinaria digital más completa y confiable.
+        </div>
+        <div class="section-right">
+          <div class="language-selector">
+            <div class="selector-container">
+              <i class="fas fa-globe"></i>
+              <span class="selected-language">Español</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <ul class="dropdown-menu">
+              <li>Español</li>
+              <li>Inglés</li>
+              <li>Portugués</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Cabecera principal -->
+    <header id="main-header">
+      <div class="container">
+        <div class="left-and-middle">
+          <div class="logo">
+            <img src="assets/logo-1.png" alt="Logo" />
+          </div>
+          <nav class="menu">
+            <div class="menu-container">
+              <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+              </div>
+              <ul class="menu-items menu" id="menu-items">
+                <li><a class="menuItem" href="#">Inicio</a></li>
+                <li><a class="menuItem" href="#">Recetas</a></li>
+                <li><a class="menuItem" href="#">Nosotros</a></li>
+                <li><a class="menuItem" href="#">Contacto</a></li>
+                <div class="menu-close" id="menu-close">
+                  <i class="fas fa-times"></i>
+                </div>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <button class="search-button"><i class="fas fa-search"></i></button>
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="¿Qué deseas cocinar el día de hoy?"
+          />
+        </div>
+      </div>
+    </header>
+
+    <div class="section-container">
+      <h2 class="section-title">Recetas más recientes</h2>
+      <div class="subsection-wrapper">
+        <div class="subsection">
+          <div class="imgsubsection2"></div>
+          <p>Ceviche de corvina con choclo</p>
+        </div>
+        <div class="subsection">
+          <div class="imgsubsection"></div>
+          <p>Ceviche de corvina con choclo</p>
+        </div>
+        <div class="subsection">
+          <div class="imgsubsection2"></div>
+          <p>Ceviche de corvina con choclo</p>
+        </div>
+        <div class="subsection">
+          <div class="imgsubsection"></div>
+          <p>Ceviche de corvina con choclo</p>
+        </div>
+        <div class="subsection">
+          <div class="imgsubsection2"></div>
+          <p>Ceviche de corvina con choclo</p>
+        </div>
+        <div class="subsection">
+          <div class="imgsubsection"></div>
+          <p>Ceviche de corvina con choclo</p>
+        </div>
+        <div class="subsection">
+          <div class="imgsubsection2"></div>
+          <p>Ceviche de corvina con choclo</p>
+        </div>
+        <div class="subsection">
+          <div class="imgsubsection"></div>
+          <p>Ceviche de corvina con choclo</p>
+        </div>
+        <div class="subsection">
+          <div class="imgsubsection2"></div>
+          <p>Ceviche de corvina con choclo</p>
+        </div>
+        <div class="subsection">
+          <div class="imgsubsection"></div>
+          <p>Ceviche de corvina con choclo</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenido Principal -->
+    <main>
+      <!-- Sección Video con Texto -->
+      <section id="section-1" class="video-section">
+        <div class="overlay"></div>
+        <video autoplay muted loop>
+          <source src="assets/vidacomer.mp4" type="video/mp4" />
+          Tu navegador no soporta la reproducción de videos.
+        </video>
+        <div class="overlay-text">
+          <h1>
+            ¡Descubre el placer de cocinar y disfrutar de recetas deliciosas con
+            acomer.pe!
+          </h1>
+        </div>
+      </section>
+
+      <!-- Sección Contadores -->
+      <section id="section-2" class="counter-section">
+        <div class="container">
+          <div class="counter-wrapper">
+            <div class="counter">
+              <span class="plus">+</span>
+              <span class="number" data-target="200">0</span>
+            </div>
+            <div class="label">Recetas</div>
+          </div>
+          <div class="counter-wrapper">
+            <div class="counter">
+              <span class="plus">+</span>
+              <span class="number" data-target="1000000">0</span>
+            </div>
+            <div class="label">Recetas</div>
+          </div>
+          <div class="counter-wrapper">
+            <div class="counter">
+              <span class="plus">+</span>
+              <span class="number" data-target="20">0</span>
+            </div>
+            <div class="label">Premios</div>
+          </div>
+          <div class="counter-wrapper">
+            <div class="counter">
+              <span class="plus">+</span>
+              <span class="number" data-target="80000">0</span>
+            </div>
+            <div class="label">Seguidores</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Categorias Populares -->
+      <section id="pcategories_section" class="pcategories_container">
+        <div class="pcategories_header">
+          <div class="pcategories_left-column">
+            <h5 class="pcategories_subtitle">Categorías populares</h5>
+            <h1>Lo más buscado</h1>
+          </div>
+          <div class="pcategories_right-column">
+            <button class="button-primary">Ver todas las categorías</button>
+          </div>
+        </div>
+
+        <div class="pcategories_content">
+          <div class="pcategories_main-column">
+            <div
+              class="pcategories_main-content"
+              style="background-image: url('/assets/categories1.png')"
+            >
+              <div class="pcategories_overlay-text">Entradas</div>
+              <div class="overlay-pcategories"></div>
+            </div>
+          </div>
+          <div class="pcategories_side-columns">
+            <div class="pcategories_side-column">
+              <div
+                class="pcategories_side-content"
+                style="background-image: url('/assets/categories2.png')"
+              >
+                <div class="pcategories_overlay-text">Sopas y caldos</div>
+                <div class="overlay-pcategories"></div>
+              </div>
+              <div
+                class="pcategories_side-content"
+                style="background-image: url('/assets/categories3.png')"
+              >
+                <div class="pcategories_overlay-text">Platos principales</div>
+                <div class="overlay-pcategories"></div>
+              </div>
+            </div>
+            <div class="pcategories_side-column">
+              <div
+                class="pcategories_side-content"
+                style="background-image: url('/assets/categories3.png')"
+              >
+                <div class="pcategories_overlay-text">Bebidas</div>
+                <div class="overlay-pcategories"></div>
+              </div>
+              <div
+                class="pcategories_side-content"
+                style="background-image: url('/assets/categories2.png')"
+              >
+                <div class="pcategories_overlay-text">Postres</div>
+                <div class="overlay-pcategories"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Publicidad -->
+      <section class="publicidad">
+        <img class="onlydesktop" src="assets/publicidad.png" alt="Publicidad" />
+        <img
+          class="onlymobile"
+          src="assets/publicidad_mobile.png"
+          alt="Publicidad"
+        />
+      </section>
+
+      <!-- Sección Top Recetas -->
+
+      <section class="top_recetas">
+        <div class="top_recetas_header">
+          <div class="top_recetas_left">
+            <h5 class="top_recetas_subtitle">Nuestro Recetario</h5>
+            <h1>Top Recetas Más Vistas</h1>
+          </div>
+          <div class="top_recetas_right">
+            <button class="button-primary">Ver Todas las Recetas</button>
+          </div>
+        </div>
+
+        <div class="top_recetas_grid">
+          <div class="top_recetas_item">
+            <div
+              class="top_recetas_image"
+              style="background-image: url('/assets/receta1.png')"
+            ></div>
+            <p class="categoria">Entradas</p>
+            <p class="nombre_de_plato">Lomo Saltado</p>
+            <div class="top_recetas_info">
+              <i class="fas fa-utensils"></i><span>Fácil</span>
+              <span class="dot">•</span>
+              <i class="fas fa-clock"></i><span class="duracion">1 hora</span>
+            </div>
+          </div>
+          <div class="top_recetas_item">
+            <div
+              class="top_recetas_image"
+              style="background-image: url('/assets/receta2.png')"
+            ></div>
+            <p class="categoria">Entradas</p>
+            <p class="nombre_de_plato">Ceviche</p>
+            <div class="top_recetas_info">
+              <i class="fas fa-utensils"></i><span>Intermedio</span>
+              <span class="dot">•</span>
+              <i class="fas fa-clock"></i
+              ><span class="duracion">45 minutos</span>
+            </div>
+          </div>
+          <div class="top_recetas_item">
+            <div
+              class="top_recetas_image"
+              style="background-image: url('/assets/receta3.png')"
+            ></div>
+            <p class="categoria">Entradas</p>
+            <p class="nombre_de_plato">Ceviche</p>
+            <div class="top_recetas_info">
+              <i class="fas fa-utensils"></i><span>Intermedio</span>
+              <span class="dot">•</span>
+              <i class="fas fa-clock"></i
+              ><span class="duracion">45 minutos</span>
+            </div>
+          </div>
+          <div class="top_recetas_item">
+            <div
+              class="top_recetas_image"
+              style="background-image: url('/assets/receta4.png')"
+            ></div>
+            <p class="categoria">Entradas</p>
+            <p class="nombre_de_plato">Ceviche</p>
+            <div class="top_recetas_info">
+              <i class="fas fa-utensils"></i><span>Intermedio</span>
+              <span class="dot">•</span>
+              <i class="fas fa-clock"></i
+              ><span class="duracion">45 minutos</span>
+            </div>
+          </div>
+          <div class="top_recetas_item">
+            <div
+              class="top_recetas_image"
+              style="background-image: url('/assets/receta1.png')"
+            ></div>
+            <p class="categoria">Entradas</p>
+            <p class="nombre_de_plato">Lomo Saltado</p>
+            <div class="top_recetas_info">
+              <i class="fas fa-utensils"></i><span>Fácil</span>
+              <span class="dot">•</span>
+              <i class="fas fa-clock"></i><span class="duracion">1 hora</span>
+            </div>
+          </div>
+          <div class="top_recetas_item">
+            <div
+              class="top_recetas_image"
+              style="background-image: url('/assets/receta2.png')"
+            ></div>
+            <p class="categoria">Entradas</p>
+            <p class="nombre_de_plato">Ceviche</p>
+            <div class="top_recetas_info">
+              <i class="fas fa-utensils"></i><span>Intermedio</span>
+              <span class="dot">•</span>
+              <i class="fas fa-clock"></i
+              ><span class="duracion">45 minutos</span>
+            </div>
+          </div>
+          <div class="top_recetas_item">
+            <div
+              class="top_recetas_image"
+              style="background-image: url('/assets/receta3.png')"
+            ></div>
+            <p class="categoria">Entradas</p>
+            <p class="nombre_de_plato">Ceviche</p>
+            <div class="top_recetas_info">
+              <i class="fas fa-utensils"></i><span>Intermedio</span>
+              <span class="dot">•</span>
+              <i class="fas fa-clock"></i
+              ><span class="duracion">45 minutos</span>
+            </div>
+          </div>
+          <div class="top_recetas_item">
+            <div
+              class="top_recetas_image"
+              style="background-image: url('/assets/receta4.png')"
+            ></div>
+            <p class="categoria">Entradas</p>
+            <p class="nombre_de_plato">Ceviche</p>
+            <div class="top_recetas_info">
+              <i class="fas fa-utensils"></i><span>Intermedio</span>
+              <span class="dot">•</span>
+              <i class="fas fa-clock"></i
+              ><span class="duracion">45 minutos</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Publicidad -->
+      <section class="publicidad">
+        <img class="onlydesktop" src="assets/publicidad.png" alt="Publicidad" />
+        <img
+          class="onlymobile"
+          src="assets/publicidad_mobile.png"
+          alt="Publicidad"
+        />
+      </section>
+
+      <!-- Sección Nosotros -->
+      <section class="nosotros_section">
+        <div class="nosotros_content">
+          <div class="nosotros_left">
+            <div class="nosotros_text-container">
+              <h1 class="nosotros_title">Somos a comer.pe</h1>
+              <p class="nosotros_text">
+                acomer.pe nació de una pasión compartida por la rica y diversa
+                gastronomía peruana. Fundada por un equipo de amantes de la
+                cocina y expertos culinarios, nuestro objetivo es compartir y
+                preservar las recetas tradicionales, así como inspirar a otros a
+                experimentar con nuevas creaciones. Creemos que la cocina es una
+                forma de conectar con nuestras raíces, celebrar nuestra cultura
+                y disfrutar de momentos especiales con familiares y amigos.
+              </p>
+            </div>
+          </div>
+          <div class="nosotros_right"></div>
+        </div>
+      </section>
+
+      <!-- Sección Publicidad -->
+      <section class="publicidad">
+        <img class="onlydesktop" src="assets/publicidad.png" alt="Publicidad" />
+        <img
+          class="onlymobile"
+          src="assets/publicidad_mobile.png"
+          alt="Publicidad"
+        />
+      </section>
+
+      <!-- Sección Boletin -->
+      <section class="boletin_section">
+        <div class="boletin_content">
+          <div class="boletin_text">
+            <h5>Suscríbete a nuestro boletín</h5>
+            <h2>Recibe alertas por cada receta</h2>
+            <p>¡Haz de cada comida una obra maestra con nuestro boletín!</p>
+            <div class="boletin_form">
+              <input
+                type="email"
+                class="boletin_input"
+                placeholder="Tu correo electrónico"
+              />
+              <button class="boletin_button">Suscribirse</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+      <div class="container">
+        <div class="social-media">
+          <p>Síguenos en nuestras redes sociales</p>
+          <div class="icons">
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-logo">
+          <img src="assets/logo-2.png" alt="Logo" />
+          <p>Todos los derechos reservados</p>
+        </div>
+        <br />
+        <br />
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

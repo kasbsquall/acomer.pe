@@ -1,0 +1,1258 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap");
+
+// Variables de colores
+$background-color: #f9f9f9;
+$primary-color: #642d00;
+$secondary-color: #ff5a00;
+$tertiary-color: #fcb400;
+$quaternary-color: #fcd6c1;
+$black-color: #25252c;
+$dark-gray: #4f4f4f;
+$gray: #c2c2c2;
+$light-gray: #eeeeee;
+$white-color: #fcfcfc;
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+// Estilos globales
+body {
+  font-family: "Epilogue", sans-serif;
+  background-color: $background-color;
+  margin: 0;
+  color: $black-color;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Contenedor principal
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// Cabecera superior
+#top-header {
+  background-color: $primary-color;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+  }
+}
+
+// Cabecera principal
+#main-header {
+  background-color: $white-color;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 82px;
+  }
+}
+
+.logo {
+  width: 300px;
+  height: auto;
+}
+
+// Sección 1: Video con Texto
+.video-section {
+  position: relative;
+  height: 850px;
+  overflow: hidden;
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .overlay-text {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: #fcfcfc;
+    text-align: center;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 130%;
+    bottom: 0px;
+    width: 80%;
+    padding-bottom: 40px;
+  }
+
+  .overlay-text h1 {
+    color: $white-color !important;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 54%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  pointer-events: none; /* Esto asegura que el overlay no interfiera con la interacción con el video */
+}
+
+// Tipografía y estilos de texto
+h1 {
+  color: #000;
+  font-family: "Epilogue", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 142.9%; /* 68.592px */
+}
+
+h2 {
+  color: var(--Black, $black-color);
+  font-family: "Epilogue", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 52px */
+}
+
+h3 {
+  color: var(--Black, $black-color);
+  font-family: "Epilogue", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h4 {
+  color: $primary-color;
+  text-align: center;
+  font-family: "Epilogue", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+h5 {
+  color: var(--Black, $black-color);
+  font-family: "Epilogue", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.text-slider {
+  color: var(--White, $white-color);
+  text-align: center;
+  font-family: "Epilogue", sans-serif;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 75.4px */
+}
+
+// Definir los estilos como variable
+$subtitle-2-styles: (
+  color: var(--White, $white-color),
+  font-size: 18px,
+  font-style: normal,
+  font-weight: 700,
+  line-height: normal,
+);
+
+// Crear un mixin para aplicar los estilos
+@mixin subtitle-2 {
+  @each $property, $value in $subtitle-2-styles {
+    #{$property}: #{$value};
+  }
+}
+
+// Usar el mixin en un selector
+.subtitle-2 {
+  @include subtitle-2;
+}
+
+.language-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.selector-container {
+  display: flex;
+  align-items: center;
+
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: $background-color;
+  transition: border-color 0.3s;
+}
+
+.selector-container:hover {
+  border-color: #bbb;
+}
+
+.selector-container i {
+  margin-right: 8px;
+  margin-left: 8px;
+  color: $background-color;
+}
+
+.selected-language {
+  flex: 1;
+}
+
+.fa-chevron-down {
+  margin-left: auto;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: $white-color;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu li:hover {
+  background-color: $white-color;
+}
+
+// Botón principal
+.button-primary {
+  display: flex;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 16px;
+  background: $primary-color;
+  color: $white-color;
+  border: $primary-color;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  background: $black-color;
+}
+
+.search-button {
+  display: flex;
+  padding: 16px 16px;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  gap: 16px;
+  border-radius: 16px;
+  background: $primary-color;
+  color: $white-color;
+  border: $primary-color;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background: $black-color;
+}
+
+.search-button i {
+  font-weight: 600;
+}
+
+// Sección 2: Contadores
+.counter-section {
+  padding: 60px;
+  background: $secondary-color;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around; /* Ajusta el espaciado de los contadores */
+  flex-wrap: wrap;
+}
+
+.counter-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px; /* Espacio alrededor de cada contador */
+}
+
+.counter-wrapper:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background: white; /* Color de la línea vertical */
+}
+
+.counter {
+  font-size: 2em; /* Tamaño del número */
+  font-weight: bold;
+  color: $white-color;
+}
+
+.label {
+  margin-top: 5px; /* Espacio entre el número y el texto */
+  color: $white-color;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+// Footer
+#main-footer {
+  background-color: $black-color;
+  margin-top: 80px;
+  padding: 40px 0 20px 0;
+  color: $white-color;
+  .container {
+    display: flex;
+    height: 196px;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    .social-media {
+      text-align: center;
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: row;
+      gap: 100px;
+      align-content: center;
+      align-items: center;
+      .icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        .icon {
+          width: 48px;
+          height: 48px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 2px solid $white-color;
+          border-radius: 50%;
+          font-size: 16px;
+          color: $white-color;
+          text-decoration: none;
+          transition: background-color 0.3s;
+          &:hover {
+            background-color: $primary-color;
+          }
+        }
+      }
+    }
+    .footer-logo {
+      text-align: center;
+      img {
+        width: 300px;
+        height: auto;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+//Menu
+
+/* Estilos del menú */
+.menu {
+  padding: 10px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo de menú visible solo en mobile */
+.menu-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.left-and-middle {
+  display: flex;
+  align-items: center;
+  gap: 0; /* Esto asegura que no haya espacio entre la sección izquierda y la del medio */
+}
+
+/* Estilos del toggle */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-close {
+  display: none;
+  cursor: pointer;
+}
+
+/* Estilos del menú en desktop */
+@media (min-width: 769px) {
+  .menu-items {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .onlymobile {
+    display: none;
+  }
+
+  .menu-items li {
+    margin: 0 15px;
+  }
+
+  .menu-items a {
+    text-decoration: none;
+    color: $black-color;
+    font-weight: 700;
+    transition: color 0.3s;
+  }
+
+  .menu-items a:hover,
+  .menu-items a.active {
+    color: #ff5a00; /* Color primario */
+  }
+
+  .menu-logo {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-close {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-right {
+    display: none;
+  }
+
+  #top-header .container {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .menu-items {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 88%);
+    flex-direction: column;
+    padding-top: 60px; /* Ajusta según la altura del menú */
+    z-index: 1000;
+  }
+
+  .menu-items a {
+    color: $white-color;
+  }
+
+  .menu-items.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  .menu-close {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 1.5rem;
+  }
+
+  /* Muestra el botón de cierre cuando el menú está visible */
+  .menu-items.show .menu-close {
+    display: block;
+  }
+
+  /* Ajusta el estilo del botón de cierre */
+  .menu-close i {
+    font-size: 42px;
+    color: $secondary-color; /* Cambia el color según tu diseño */
+  }
+
+  .menu-items li {
+    margin: 10px 0;
+    text-align: center;
+    font-size: 36px;
+  }
+}
+
+.menu-items a {
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.menu-items a:hover,
+.menu-items a.active {
+  color: $primary-color; /* Color primario */
+  font-weight: 800;
+}
+
+//Recetas tipo IG
+
+.section-container {
+  overflow-x: auto;
+  padding: 20px 20px;
+  position: absolute;
+  z-index: 10;
+  left: 0; /* Alinea el contenedor al borde izquierdo */
+  right: 0; /* Alinea el contenedor al borde derecho */
+  max-width: 1280px; /* Aplica el ancho máximo deseado */
+  margin: 0 auto; /* Centra el contenedor si el contenedor padre es suficientemente ancho */
+}
+
+.imgsubsection {
+  background-image: url("../assets/imgplaceholder.png");
+  width: 100%;
+  height: 90px;
+  background-size: cover; /* Ajusta la imagen para cubrir el contenedor */
+  background-position: center; /* Centra la imagen en el contenedor */
+  border-radius: 15px; /* Redondea las esquinas si es necesario */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.imgsubsection2 {
+  background-image: url("../assets/imgplaceholder2.png");
+  width: 100%;
+  height: 90px;
+  background-size: cover; /* Ajusta la imagen para cubrir el contenedor */
+  background-position: center; /* Centra la imagen en el contenedor */
+  border-radius: 15px; /* Redondea las esquinas si es necesario */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.section-title {
+  text-align: left;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: $white-color;
+}
+
+.subsection-wrapper {
+  display: flex;
+  overflow-x: auto; /* Permite el desplazamiento horizontal */
+  scroll-behavior: smooth; /* Suaviza el desplazamiento */
+  flex-wrap: nowrap;
+  gap: 20px; /* Espacio entre las subsecciones */
+  max-width: 1280px; /* Establece el ancho máximo */
+  margin: 0 auto; /* Centra el contenedor en la vista de escritorio */
+  padding: 0; /* Elimina el padding para un mejor ajuste */
+  overflow: hidden;
+}
+
+.subsection {
+  display: flex;
+  width: 255px;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.subsection img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.subsection p {
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+  font-weight: 700;
+  border-radius: 20px;
+  color: $black-color;
+}
+
+//Popular categories
+
+/* Container */
+.pcategories_container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+/* Header */
+.pcategories_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.pcategories_left-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.pcategories_subtitle {
+  color: $primary-color;
+}
+
+.pcategories_title {
+  font-size: 32px;
+  font-weight: bold;
+  color: $black-color;
+}
+
+/* Content */
+.pcategories_content {
+  display: flex;
+  gap: 10px;
+}
+
+/* Main Column (50% width) */
+.pcategories_main-column {
+  flex: 0 0 50%;
+  height: 450px;
+}
+
+.pcategories_main-content {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  position: relative;
+}
+
+/* Side Columns (Each takes 25% width) */
+.pcategories_side-columns {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+}
+
+.pcategories_side-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pcategories_side-content {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  height: 225px;
+  position: relative;
+}
+
+/* Overlay Text */
+.pcategories_overlay-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 20px;
+  padding: 10px 10px;
+  z-index: 11;
+}
+
+.overlay-pcategories {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 54%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  pointer-events: none; /* Esto asegura que el overlay no interfiera con la interacción con el video */
+}
+
+//publicidad
+.publicidad {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.publicidad img {
+  width: auto;
+  height: 200px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+//top recetas
+
+/* Sección principal */
+.top_recetas {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+/* Header de la sección */
+.top_recetas_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.top_recetas_left {
+  text-align: left;
+}
+
+.top_recetas_subtitle {
+  color: $primary-color;
+}
+
+.top_recetas_right {
+  text-align: right;
+}
+
+/* Grid de recetas */
+.top_recetas_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.top_recetas_item {
+  text-align: left;
+}
+
+.top_recetas_image {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.categoria {
+  margin: 14px 0 0 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: $primary-color;
+}
+
+.nombre_de_plato {
+  padding: 6px 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: $black-color;
+}
+
+.top_recetas_info {
+  display: flex;
+  align-items: center;
+  color: $dark-gray;
+}
+
+.top_recetas_info i {
+  margin-right: 5px;
+}
+
+.top_recetas_info span {
+  margin-right: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: $black-color;
+}
+
+.top_recetas_info .dot {
+  font-size: 40px;
+  color: $dark-gray;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .top_recetas_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .top_recetas_grid {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top_recetas_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+//Nosotros index
+
+/* Sección "Nosotros" */
+.nosotros_section {
+  height: 550px;
+  background-image: url("/assets/somosacomer.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.nosotros_content {
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Columna izquierda */
+.nosotros_left {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nosotros_text-container {
+  width: 100%;
+  height: 300px;
+  background: rgba(252, 252, 252, 0.9);
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px 0px rgba(52, 52, 52, 0.2);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nosotros_title {
+  color: $black-color;
+}
+
+.nosotros_text {
+  font-size: 18px;
+  color: $black-color;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+/* Columna derecha */
+.nosotros_right {
+  width: 40%;
+}
+
+//Boletin
+
+/* Sección "Boletín" */
+.boletin_section {
+  background-image: url("/assets/boletinfondo.png"); /* Cambia la ruta de la imagen según sea necesario */
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.boletin_content {
+  max-width: 1280px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.boletin_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.boletin_text h5 {
+  color: $white-color;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.boletin_text h2 {
+  font-size: 44px;
+  color: $white-color;
+  margin-bottom: 20px;
+}
+
+.boletin_text p {
+  font-size: 18px;
+  color: $white-color;
+  margin-bottom: 30px;
+}
+
+/* Estilo del formulario */
+.boletin_form {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.boletin_input {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 0px solid $dark-gray;
+  border-radius: 6px;
+  outline: none;
+}
+
+.boletin_button {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: $primary-color; /* Color del botón */
+  border: none;
+  font-weight: 700;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boletin_button:hover {
+  background-color: $black-color; /* Color al hacer hover en el botón */
+}
+
+/* Estilos generales para móviles */
+@media (max-width: 768px) {
+  .container,
+  .subsection-wrapper {
+    width: 100%;
+    padding: 0;
+  }
+
+  .onlydesktop {
+    display: none;
+  }
+
+  /* Tipografía y espaciado */
+  h2,
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .section-title {
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #fcfcfc;
+  }
+
+  #main-footer .container .social-media {
+    flex-direction: column;
+    gap: 0px;
+    align-content: center;
+    align-items: center;
+  }
+
+  #main-footer {
+    margin-top: 20px;
+    padding: 40px 0 40px 0;
+  }
+
+  /* Contador */
+  .counter {
+    text-align: center;
+    margin: 0 0;
+  }
+
+  .counter .number {
+    font-size: 30px;
+  }
+
+  .boletin_section {
+    padding: 20px 0px;
+    margin-top: 20px;
+  }
+
+  .boletin_text h5 {
+    font-size: 16px;
+  }
+
+  .boletin_text h2 {
+    font-size: 24px;
+  }
+
+  .boletin_form {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  /* Dropdown */
+  .dropdown-menu {
+    width: 100%;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+
+  .subtitle-2 {
+    text-align: center;
+  }
+
+  .counter-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    width: 100%;
+    margin-right: 40px;
+  }
+
+  .counter-section {
+    padding: 0px;
+  }
+
+  .nombre_de_plato {
+    padding: 6px 0 0 0;
+  }
+
+  .nosotros_text-container {
+    padding: 60px 20px;
+  }
+
+  .nosotros_section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .nosotros_title {
+    font-size: 24px;
+  }
+
+  .nosotros_text {
+    font-size: 14px;
+  }
+
+  .nosotros_content {
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-direction: column;
+  }
+
+  .nosotros_left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .top_recetas_image {
+    height: 300px;
+  }
+
+  .video-section .overlay-text {
+    width: 100%;
+    padding: 0 20px 20px 20px;
+  }
+
+  .video-section .overlay-text h1 {
+    font-size: 24px;
+  }
+
+  .video-section {
+    height: 500px;
+  }
+
+  .selector-container {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  /* Espaciado general */
+  .section {
+    margin-bottom: 30px;
+  }
+
+  #main-header {
+    padding: 0 20px;
+  }
+
+  .pcategories_container {
+    padding: 20px;
+  }
+
+  .pcategories_content {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .pcategories_side-columns {
+    height: 300px;
+  }
+
+  .top_recetas {
+    padding: 20px;
+  }
+
+  .button-primary {
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background: #642d00;
+    color: #fcfcfc;
+    border: #642d00;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .pcategories_main-column {
+    flex: 0 0 100%;
+    height: 230px;
+  }
+}
+
+@media (max-width: 376px) {
+  .logo {
+    width: 150px;
+    margin-right: 20px;
+  }
+
+  .logo img {
+    width: 150px;
+  }
+}
+
+//Search container
+
+/* Estilos del contenedor y del input */
+.search-container {
+  position: absolute;
+  width: 300px;
+  display: none; /* Oculta por defecto */
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+.search-button {
+  position: relative;
+  z-index: 10; /* Asegura que el botón esté por encima del input */
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .search-container {
+    width: 50%;
+  }
+}
+
+/* Responsivo para móviles */
+@media (max-width: 400px) {
+  .search-container {
+    width: 220px;
+  }
+}
