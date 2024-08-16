@@ -73,6 +73,7 @@ body {
   bottom: 0px;
   width: 80%;
   padding-bottom: 40px;
+  max-width: 1280px;
 }
 .video-section .overlay-text h1 {
   color: #fcfcfc !important;
