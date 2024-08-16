@@ -835,7 +835,7 @@ h5 {
 
 /* Sección "Boletín" */
 .boletin_section {
-  background-image: url("/assets/boletinfondo.png"); /* Cambia la ruta de la imagen según sea necesario */
+  background-image: url("../assets/boletinfondo.png"); /* Cambia la ruta de la imagen según sea necesario */
   background-size: cover;
   background-position: center;
   padding: 120px 0px;
