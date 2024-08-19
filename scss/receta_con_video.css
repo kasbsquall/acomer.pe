@@ -1,0 +1,452 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap");
+/* Estructura principal */
+.receta-interna {
+  display: flex;
+  padding: 40px 0;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.receta-contenido {
+  flex: 2 2 0;
+}
+
+.receta-compartir {
+  flex: 1 1 0;
+}
+
+/* Estilos para los títulos y descripciones */
+.receta-contenido h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.receta-contenido h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.receta-visitas {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.receta-visitas i {
+  margin-right: 5px;
+}
+
+.receta-contenido p {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+/* Imagen principal y miniaturas */
+.receta-imagen-principal img {
+  width: 100%;
+  height: 550px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.receta-miniaturas {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.receta-miniaturas img {
+  width: 100%;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+
+/* Secciones con bordes */
+.receta-seccion {
+  border-top: 2px solid #642d00;
+  border-bottom: 2px solid #642d00;
+  padding: 24px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.receta-compartir .receta-seccion {
+  margin-top: 0px;
+}
+
+.ingrediente-info {
+  display: flex;
+  align-items: center;
+}
+
+.receta-seccion h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Lista de ingredientes */
+.receta-ingredientes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.ingrediente-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ingrediente-numero {
+  background-color: #ff5a00;
+  color: #fcfcfc;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  margin-right: 10px;
+  padding: 20px;
+}
+
+.ingrediente-nombre,
+.ingrediente-cantidad {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Lista de instrucciones */
+.receta-instrucciones {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.instruccion-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.instruccion-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.instruccion-numero {
+  background-color: #ff8c00;
+  color: white;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.instruccion-titulo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Lista de pasos */
+.instruccion-item ul {
+  list-style-type: disc;
+  margin-left: 60px;
+  line-height: 24px;
+}
+
+.receta-seccion {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.instruccion-item ul li {
+  margin-bottom: 10px;
+}
+
+/* Sección de compartir */
+.receta-compartir h2 {
+  font-size: 24px;
+}
+
+.receta-social {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.receta-social i {
+  color: #642d00;
+  font-size: 24px;
+  border: 2px solid #642d00;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+}
+
+.receta-social i:hover {
+  background: #642d00;
+  color: #fcfcfc;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .receta-interna {
+    flex-direction: column;
+    padding: 0px 20px 0px 20px;
+  }
+  .receta-contenido,
+  .receta-compartir {
+    flex: 1 1 100%;
+  }
+  .receta-imagen-principal img {
+    border-radius: 16px;
+    height: 238px;
+  }
+  .receta-miniaturas {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .otrasrecetas h1 {
+    font-size: 18px !important;
+    margin-bottom: 0px !important;
+  }
+  .receta-seccion h2 {
+    font-size: 20px;
+  }
+}
+.receta_int_widget {
+  height: 238px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  transition: background-size 1s ease;
+}
+
+/* Sección Valores Nutricionales */
+.receta-nutricional {
+  background-color: #4a2d19; /* Marrón */
+  padding: 20px;
+  color: white;
+  margin-top: 20px; /* Separación de la sección anterior */
+  border-radius: 16px;
+}
+
+.receta-nutricional h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.nutricional-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.nutricional-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.nutricional-titulo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nutricional-valor {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: right;
+}
+
+.nutricional-separador {
+  border: 0;
+  height: 2pt;
+  background-color: #ffffff;
+  margin: 5px 0;
+}
+
+.nutricional-info p {
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+/* Sección Preparación */
+.receta-preparacion {
+  background-color: #ff5a00; /* Naranja */
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 20px; /* Separación de la sección anterior */
+  text-align: center;
+}
+
+.receta-preparacion h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.preparacion-info {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Sección Boletín */
+.receta-boletin {
+  background-color: #eeeeee; /* Fondo gris claro */
+  padding: 20px;
+  border-radius: 16px;
+  margin-top: 20px; /* Separación de la sección anterior */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.receta-boletin h5 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #642d00;
+}
+
+.receta-boletin p {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.boletin-input-group {
+  display: flex;
+  align-items: center;
+}
+
+.boletin-input {
+  flex: 1;
+  padding: 10px;
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  margin-right: 10px; /* Espacio entre el input y el botón */
+}
+
+.boletin-input::-moz-placeholder {
+  color: #999; /* Placeholder en gris */
+}
+
+.boletin-input::placeholder {
+  color: #999; /* Placeholder en gris */
+}
+
+.boletin-submit {
+  background-color: #4a2d19; /* Marrón */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.boletin-submit i {
+  font-size: 16px; /* Icono del botón */
+}
+
+.boletin-privacidad {
+  font-size: 14px;
+  color: #666;
+}
+
+.ultimas-receta-seccion {
+  border-top: 2px solid #642d00;
+  border-bottom: 2px solid #642d00;
+  padding: 24px 0;
+  margin-top: 40px;
+}
+
+.ultimas-receta-seccion h5 {
+  font-size: 18px;
+  color: #25252c;
+}
+
+.recetas_widget {
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px 0;
+}
+
+.otrasrecetas h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+/* Estilos personalizados */
+.receta-video {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 0 0 0;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.video-js {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .receta-video {
+    padding: 20px;
+  }
+  .receta-contenido h1 {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .video-container {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}/*# sourceMappingURL=receta_con_video.css.map */

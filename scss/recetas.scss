@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap");
+
+// Variables de colores
+$background-color: #f9f9f9;
+$primary-color: #642d00;
+$secondary-color: #ff5a00;
+$tertiary-color: #fcb400;
+$quaternary-color: #fcd6c1;
+$black-color: #25252c;
+$dark-gray: #4f4f4f;
+$gray: #c2c2c2;
+$light-gray: #eeeeee;
+$white-color: #fcfcfc;
+
+/* Estilos para la sección de recetas */
+.recetas-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.recetas-header h1 {
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+
+
+/* Estilos para el contenedor de filtros */
+.recetas-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+
+.top_recetas {
+  padding: 0px 0 !important;
+}
+
+.espaciador {
+  padding: 40px 0 0 0;
+}
+
+/* Estilos generales para los dropdowns */
+.filtro-dropdown {
+  padding: 10px;
+  border: 2px solid $primary-color;
+  border-radius: 4px;
+  font-size: 18px;
+  min-width: 180px;
+  color: $primary-color;
+  font-weight: bold;
+}
+
+/* Estilos para el input de búsqueda */
+.filtro-busqueda {
+  position: relative;
+  flex-grow: 1;
+}
+
+.filtro-input {
+  width: 100%;
+  padding: 12px;
+  padding-right: 35px;
+  border: 2px solid $primary-color;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+.recetasearch {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+/* Estilos para el botón de buscar */
+.filtro-boton {
+  padding: 10px 20px;
+  background-color: $primary-color;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filtro-boton:hover {
+  background-color: $black-color;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .recetas-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .recetas-filtros {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filtro-dropdown,
+  .filtro-input,
+  .filtro-boton {
+    width: 100%;
+  }
+
+  .recetas-section {
+    padding: 20px;
+  }
+}
+
+/* Estilos del paginador */
+.paginador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Estilos de las flechas */
+.flecha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2pt solid $primary-color;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.flecha i {
+  color: $primary-color;
+}
+
+/* Estilos de los puntos */
+.puntos {
+  display: flex;
+  gap: 10px;
+}
+
+.punto {
+  width: 15px;
+  height: 15px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.punto.active {
+  background-color: $primary-color;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .flecha {
+    width: 30px;
+    height: 30px;
+  }
+
+  .punto {
+    width: 12px;
+    height: 12px;
+  }
+
+  .top_recetas {
+    padding: 20px !important;
+  }
+
+  .filtro-busqueda {
+    width: 100%;
+  }
+
+  .espaciador {
+    padding: 0px;
+  }
+
+  #buscar-recetas {
+    width: 100%;
+  }
+}
+
+/* Estilos generales para desktop (se mantienen como estaban) */
+.recetas-filtros {
+  display: flex;
+  gap: 10px;
+}
+
+/* Ocultar el contenedor de filtros en móviles por defecto */
+#filtros-dropdown {
+  display: flex; /* Mostrar por defecto en pantallas grandes */
+  flex-direction: row;
+  gap: 10px;
+}
+
+#filtro-toggle {
+  display: none; /* Ocultar el botón de filtros en pantallas grandes */
+}
+
+@media (max-width: 768px) {
+  /* Mostrar el botón de filtros solo en móviles */
+  #filtro-toggle {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: $primary-color;
+    color: $white-color;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  /* Alinear los iconos y texto en el botón */
+  #filtro-toggle i {
+    margin-right: 10px;
+  }
+
+  /* Estilo del dropdown de filtros en móviles */
+  #filtros-dropdown {
+    display: none; /* Oculto por defecto en móviles */
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  /* Asegurar que el filtro de búsqueda y botón de buscar ocupen el 100% en móviles */
+  .filtro-busqueda,
+  #buscar-recetas {
+    width: 100%;
+  }
+
+  #recetas {
+    padding: 20px;
+  }
+}

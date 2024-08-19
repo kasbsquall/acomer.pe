@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acomer.pe</title>
+    <link rel="stylesheet" href="scss/main.css" />
+    <link rel="stylesheet" href="scss/receta_con_video.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Cabecera superior -->
+    <header id="top-header">
+      <div class="container">
+        <div class="section-left subtitle-2">
+          Tu guía culinaria digital más completa y confiable.
+        </div>
+        <div class="section-right">
+          <div class="language-selector">
+            <div class="selector-container">
+              <i class="fas fa-globe"></i>
+              <span class="selected-language">Español</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <ul class="dropdown-menu">
+              <li>Español</li>
+              <li>Inglés</li>
+              <li>Portugués</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Cabecera principal -->
+    <header id="main-header">
+      <div class="container">
+        <div class="left-and-middle">
+          <div class="logo">
+            <a href="index.html"><img src="assets/logo-1.png" alt="Logo" /></a>
+          </div>
+          <nav class="menu">
+            <div class="menu-container">
+              <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+              </div>
+              <ul class="menu-items menu" id="menu-items">
+                <li><a class="menuItem" href="#">Inicio</a></li>
+                <li><a class="menuItem" href="recetas.html">Recetas</a></li>
+                <li><a class="menuItem" href="#">Nosotros</a></li>
+                <li><a class="menuItem" href="#">Contacto</a></li>
+                <div class="menu-close" id="menu-close">
+                  <i class="fas fa-times"></i>
+                </div>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <button class="search-button"><i class="fas fa-search"></i></button>
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="¿Qué deseas cocinar el día de hoy?"
+          />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Sección Publicidad -->
+      <section class="publicidad paginterna">
+        <img class="onlydesktop" src="assets/publicidad.png" alt="Publicidad" />
+        <img
+          class="onlymobile"
+          src="assets/publicidad_mobile.png"
+          alt="Publicidad"
+        />
+      </section>
+
+      <div class="receta-video">
+        <div class="video-container">
+          <video id="vidAcomer" class="video-js vjs-default-skin" controls preload="auto">
+            <source src="assets/vidacomer.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+          </video>
+        </div>
+        
+      </div>
+
+      <div class="receta-interna">
+        <!-- Sección Izquierda (2/3) -->
+        <div class="receta-contenido">
+          <h5 class="pcategories_subtitle">Platos Principales</h5>
+          <h1>Seco a la Norteña con Frejoles</h1>
+          <div class="receta-visitas">
+            <i class="fas fa-user-friends"></i> 2.5k visitas
+          </div>
+          <p>
+            El seco a la norteña es un plato emblemático de la gastronomía
+            peruana, especialmente popular en la región norte del país. Este
+            guiso se caracteriza por su sabor intenso y aromático, gracias al
+            uso de ingredientes frescos y especias locales. Tradicionalmente, se
+            sirve con frejoles y arroz, creando una combinación perfecta de
+            texturas y sabores. El seco a la norteña es ideal para disfrutar en
+            una comida familiar o en una ocasión especial.
+          </p>
+
+          <div class="receta-seccion">
+            <h2>Ingredientes</h2>
+          </div>
+          <div class="receta-ingredientes">
+            <div class="ingrediente-item">
+              <div class="ingrediente-info">
+                <div class="ingrediente-numero">01</div>
+                <div class="ingrediente-nombre">
+                  Carne de res (pierna o costilla)
+                </div>
+              </div>
+              <div class="ingrediente-cantidad">1kg</div>
+            </div>
+            <div class="ingrediente-item">
+              <div class="ingrediente-info">
+                <div class="ingrediente-numero">02</div>
+                <div class="ingrediente-nombre">
+                  Carne de res (pierna o costilla)
+                </div>
+              </div>
+              <div class="ingrediente-cantidad">1kg</div>
+            </div>
+            <div class="ingrediente-item">
+              <div class="ingrediente-info">
+                <div class="ingrediente-numero">03</div>
+                <div class="ingrediente-nombre">
+                  Carne de res (pierna o costilla)
+                </div>
+              </div>
+              <div class="ingrediente-cantidad">1kg</div>
+            </div>
+            <div class="ingrediente-item">
+              <div class="ingrediente-info">
+                <div class="ingrediente-numero">04</div>
+                <div class="ingrediente-nombre">
+                  Carne de res (pierna o costilla)
+                </div>
+              </div>
+              <div class="ingrediente-cantidad">1kg</div>
+            </div>
+          </div>
+          <div class="receta-seccion">
+            <h2>Instrucciones</h2>
+          </div>
+          <div class="receta-instrucciones">
+            <div class="instruccion-item">
+              <div class="instruccion-info">
+                <div class="ingrediente-numero">01</div>
+                <div class="instruccion-titulo">Preparación del Seco</div>
+              </div>
+              <ul>
+                <li>
+                  En la misma olla, añade más aceite si es necesario y sofríe la
+                  cebolla, el ajo y el pimiento rojo hasta que estén dorados.
+                </li>
+                <li>
+                  Agrega el ají amarillo molido y el ají panca molido, y cocina
+                  por unos minutos más.
+                </li>
+                <li>
+                  Incorpora el cilantro licuado, la chicha de jora y el caldo de
+                  res. Mezcla bien.
+                </li>
+                <li>
+                  Vuelve a poner la carne en la olla y añade la zanahoria, las
+                  arvejas y el pimiento amarillo.
+                </li>
+                <li>
+                  Sazona con sal y pimienta al gusto. Tapa la olla y cocina a
+                  fuego lento durante aproximadamente 1 hora, o hasta que la
+                  carne esté tierna.
+                </li>
+              </ul>
+            </div>
+            <div class="instruccion-item">
+              <div class="instruccion-info">
+                <div class="ingrediente-numero">02</div>
+                <div class="instruccion-titulo">Preparación del Seco</div>
+              </div>
+              <ul>
+                <li>
+                  En la misma olla, añade más aceite si es necesario y sofríe la
+                  cebolla, el ajo y el pimiento rojo hasta que estén dorados.
+                </li>
+                <li>
+                  Agrega el ají amarillo molido y el ají panca molido, y cocina
+                  por unos minutos más.
+                </li>
+                <li>
+                  Incorpora el cilantro licuado, la chicha de jora y el caldo de
+                  res. Mezcla bien.
+                </li>
+                <li>
+                  Vuelve a poner la carne en la olla y añade la zanahoria, las
+                  arvejas y el pimiento amarillo.
+                </li>
+                <li>
+                  Sazona con sal y pimienta al gusto. Tapa la olla y cocina a
+                  fuego lento durante aproximadamente 1 hora, o hasta que la
+                  carne esté tierna.
+                </li>
+              </ul>
+            </div>
+            <div class="instruccion-item">
+              <div class="instruccion-info">
+                <div class="ingrediente-numero">03</div>
+                <div class="instruccion-titulo">Preparación del Seco</div>
+              </div>
+              <ul>
+                <li>
+                  En la misma olla, añade más aceite si es necesario y sofríe la
+                  cebolla, el ajo y el pimiento rojo hasta que estén dorados.
+                </li>
+                <li>
+                  Agrega el ají amarillo molido y el ají panca molido, y cocina
+                  por unos minutos más.
+                </li>
+                <li>
+                  Incorpora el cilantro licuado, la chicha de jora y el caldo de
+                  res. Mezcla bien.
+                </li>
+                <li>
+                  Vuelve a poner la carne en la olla y añade la zanahoria, las
+                  arvejas y el pimiento amarillo.
+                </li>
+                <li>
+                  Sazona con sal y pimienta al gusto. Tapa la olla y cocina a
+                  fuego lento durante aproximadamente 1 hora, o hasta que la
+                  carne esté tierna.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección Derecha (1/3) -->
+        <div class="receta-compartir">
+          <div class="receta-seccion">
+            <h2>Compartir</h2>
+            <div class="receta-social icons">
+              <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-pinterest"></i>
+            </div>
+          </div>
+
+          <!-- Nueva Sección: Valores Nutricionales -->
+          <div class="receta-nutricional">
+            <h2>Valores Nutricionales</h2>
+            <div class="nutricional-info">
+              <div class="nutricional-item">
+                <div class="nutricional-titulo">Calorías</div>
+                <div class="nutricional-valor">450kcal</div>
+              </div>
+              <hr class="nutricional-separador" />
+              <div class="nutricional-item">
+                <div class="nutricional-titulo">Calorías</div>
+                <div class="nutricional-valor">450kcal</div>
+              </div>
+              <hr class="nutricional-separador" />
+              <div class="nutricional-item">
+                <div class="nutricional-titulo">Calorías</div>
+                <div class="nutricional-valor">450kcal</div>
+              </div>
+              <hr class="nutricional-separador" />
+              <div class="nutricional-item">
+                <div class="nutricional-titulo">Calorías</div>
+                <div class="nutricional-valor">450kcal</div>
+              </div>
+              <hr class="nutricional-separador" />
+              <p>
+                <strong>*Nota:</strong> Estos valores nutricionales son
+                aproximados y pueden variar en base a los ingredientes y las
+                porciones utilizadas.
+              </p>
+            </div>
+          </div>
+
+          <!-- Preparación -->
+          <div class="receta-preparacion">
+            <h2>Preparación</h2>
+            <div class="preparacion-info">
+              <p>30 minutos</p>
+            </div>
+          </div>
+
+          <div class="receta-preparacion">
+            <h2>Dificultad</h2>
+            <div class="preparacion-info">
+              <p>Intermedio</p>
+            </div>
+          </div>
+
+          <div class="receta-preparacion">
+            <h2>Total porciones</h2>
+            <div class="preparacion-info">
+              <p>4 porciones</p>
+            </div>
+          </div>
+
+          <!--  Boletín -->
+          <div class="receta-boletin">
+            <h5>Únete a nuestro boletín</h5>
+            <p>
+              Recibe alertas cada vez que publiquemos una nueva receta y otras
+              novedades.
+            </p>
+            <div class="boletin-input-group">
+              <input
+                type="email"
+                placeholder="Tu email"
+                class="boletin-input"
+              />
+              <button class="boletin-submit">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+            <p class="boletin-privacidad">
+              Al unirte estás aceptando nuestras Políticas de Privacidad.
+            </p>
+          </div>
+
+          <div class="ultimas-receta-seccion">
+            <h5>Últimas recetas</h5>
+          </div>
+
+          <section>
+            <div class="top_recetas_grid recetas_widget">
+              <div class="top_recetas_item">
+                <div
+                  class="receta_int_widget"
+                  style="background-image: url('assets/receta3.png')"
+                ></div>
+                <p class="categoria">Entradas</p>
+                <p class="nombre_de_plato">Ceviche</p>
+                
+              </div>
+              <div class="top_recetas_item">
+                <div
+                  class="receta_int_widget"
+                  style="background-image: url('assets/receta4.png')"
+                ></div>
+                <p class="categoria">Entradas</p>
+                <p class="nombre_de_plato">Ceviche</p>
+                
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+       <!-- Sección Publicidad -->
+       <section class="publicidad paginterna">
+        <img class="onlydesktop" src="assets/publicidad.png" alt="Publicidad" />
+        <img
+          class="onlymobile"
+          src="assets/publicidad_mobile.png"
+          alt="Publicidad"
+        />
+      </section>
+
+      <!-- Recetas que te pueden gustar-->
+
+      <section class="top_recetas">
+        <div class="top_recetas_header">
+          <div class="top_recetas_left otrasrecetas">
+            <h1>Otras recetas que te pueden interesar</h1>
+          </div>
+        </div>
+
+        <div class="top_recetas_grid">
+          <div class="top_recetas_item">
+            <div
+              class="top_recetas_image"
+              style="background-image: url('assets/receta1.png')"
+            ></div>
+            <p class="categoria">Entradas</p>
+            <p class="nombre_de_plato">Lomo Saltado</p>
+            <div class="top_recetas_info">
+              <i class="fas fa-utensils"></i><span>Fácil</span>
+              <span class="dot">•</span>
+              <i class="fas fa-clock"></i><span class="duracion">1 hora</span>
+            </div>
+          </div>
+          <div class="top_recetas_item">
+            <div
+              class="top_recetas_image"
+              style="background-image: url('assets/receta2.png')"
+            ></div>
+            <p class="categoria">Entradas</p>
+            <p class="nombre_de_plato">Ceviche</p>
+            <div class="top_recetas_info">
+              <i class="fas fa-utensils"></i><span>Intermedio</span>
+              <span class="dot">•</span>
+              <i class="fas fa-clock"></i
+              ><span class="duracion">45 minutos</span>
+            </div>
+          </div>
+          <div class="top_recetas_item">
+            <div
+              class="top_recetas_image"
+              style="background-image: url('assets/receta3.png')"
+            ></div>
+            <p class="categoria">Entradas</p>
+            <p class="nombre_de_plato">Ceviche</p>
+            <div class="top_recetas_info">
+              <i class="fas fa-utensils"></i><span>Intermedio</span>
+              <span class="dot">•</span>
+              <i class="fas fa-clock"></i
+              ><span class="duracion">45 minutos</span>
+            </div>
+          </div>
+          <div class="top_recetas_item">
+            <div
+              class="top_recetas_image"
+              style="background-image: url('assets/receta4.png')"
+            ></div>
+            <p class="categoria">Entradas</p>
+            <p class="nombre_de_plato">Ceviche</p>
+            <div class="top_recetas_info">
+              <i class="fas fa-utensils"></i><span>Intermedio</span>
+              <span class="dot">•</span>
+              <i class="fas fa-clock"></i
+              ><span class="duracion">45 minutos</span>
+            </div>
+          </div>
+          <div class="top_recetas_item">
+            <div
+              class="top_recetas_image"
+              style="background-image: url('assets/receta1.png')"
+            ></div>
+            <p class="categoria">Entradas</p>
+            <p class="nombre_de_plato">Lomo Saltado</p>
+            <div class="top_recetas_info">
+              <i class="fas fa-utensils"></i><span>Fácil</span>
+              <span class="dot">•</span>
+              <i class="fas fa-clock"></i><span class="duracion">1 hora</span>
+            </div>
+          </div>
+          <div class="top_recetas_item">
+            <div
+              class="top_recetas_image"
+              style="background-image: url('assets/receta2.png')"
+            ></div>
+            <p class="categoria">Entradas</p>
+            <p class="nombre_de_plato">Ceviche</p>
+            <div class="top_recetas_info">
+              <i class="fas fa-utensils"></i><span>Intermedio</span>
+              <span class="dot">•</span>
+              <i class="fas fa-clock"></i
+              ><span class="duracion">45 minutos</span>
+            </div>
+          </div>
+          <div class="top_recetas_item">
+            <div
+              class="top_recetas_image"
+              style="background-image: url('assets/receta3.png')"
+            ></div>
+            <p class="categoria">Entradas</p>
+            <p class="nombre_de_plato">Ceviche</p>
+            <div class="top_recetas_info">
+              <i class="fas fa-utensils"></i><span>Intermedio</span>
+              <span class="dot">•</span>
+              <i class="fas fa-clock"></i
+              ><span class="duracion">45 minutos</span>
+            </div>
+          </div>
+          <div class="top_recetas_item">
+            <div
+              class="top_recetas_image"
+              style="background-image: url('assets/receta4.png')"
+            ></div>
+            <p class="categoria">Entradas</p>
+            <p class="nombre_de_plato">Ceviche</p>
+            <div class="top_recetas_info">
+              <i class="fas fa-utensils"></i><span>Intermedio</span>
+              <span class="dot">•</span>
+              <i class="fas fa-clock"></i
+              ><span class="duracion">45 minutos</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+      <div class="container">
+        <div class="social-media">
+          <p>Síguenos en nuestras redes sociales</p>
+          <div class="icons">
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-logo">
+          <img src="assets/logo-2.png" alt="Logo" />
+          <p>Todos los derechos reservados</p>
+        </div>
+        <br />
+        <br />
+      </div>
+    </footer>
+    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+
+    <script src="js/receta_con_video.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

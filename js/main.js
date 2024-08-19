@@ -141,7 +141,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
 //Search container
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -164,20 +163,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const positionSearchContainer = () => {
     const buttonRect = searchButton.getBoundingClientRect();
     searchContainer.style.top = `${buttonRect.top + window.scrollY}px`;
-    searchContainer.style.left = `${buttonRect.left - searchContainer.offsetWidth - 10}px`; // 20px a la izquierda del botón
+    searchContainer.style.left = `${
+      buttonRect.left - searchContainer.offsetWidth - 10
+    }px`; // 20px a la izquierda del botón
   };
 
   // Mostrar el contenedor al hacer clic en el botón de búsqueda
   searchButton.addEventListener("click", (e) => {
     e.stopPropagation(); // Evita que el clic en el contenedor cierre el menú
     showSearchContainer();
-    
+
     // Configura el temporizador para ocultar después de 5 segundos
   });
 
   // Ocultar el contenedor si se hace clic fuera de él
   document.addEventListener("click", (e) => {
-    if (!searchContainer.contains(e.target) && !searchButton.contains(e.target)) {
+    if (
+      !searchContainer.contains(e.target) &&
+      !searchButton.contains(e.target)
+    ) {
       hideSearchContainer();
     }
   });
