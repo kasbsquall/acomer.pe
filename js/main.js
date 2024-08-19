@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Función para posicionar el contenedor de búsqueda
   const positionSearchContainer = () => {
     const buttonRect = searchButton.getBoundingClientRect();
-    searchContainer.style.top = `${buttonRect.top + window.scrollY}px`;
+    //searchContainer.style.top = `${buttonRect.top + window.scrollY}px`;
     searchContainer.style.left = `${
       buttonRect.left - searchContainer.offsetWidth - 10
     }px`; // 20px a la izquierda del botón
@@ -195,3 +195,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+
+
+const navbar = document.querySelector('#main-header');
+let topb = navbar.offsetTop;
+function stickynavbar() {
+  if (window.scrollY >= topb) {    
+    navbar.classList.add('sticky');
+  } else {
+    navbar.classList.remove('sticky');    
+  }
+}
+window.addEventListener('scroll', stickynavbar);

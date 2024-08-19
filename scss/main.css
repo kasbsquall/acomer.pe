@@ -19,6 +19,13 @@ body {
   box-sizing: border-box;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -796,9 +803,14 @@ h5 {
   }
   .top_recetas_info span {
     margin-right: 5px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     color: #25252c;
+  }
+  .top_recetas_info .dot {
+    font-size: 24px;
+    color: #c2c2c2;
+    padding: 0 2px;
   }
 }
 @media (max-width: 480px) {
@@ -1047,7 +1059,7 @@ h5 {
     padding: 0px;
   }
   .nombre_de_plato {
-    padding: 6px 0 0 0;
+    padding: 2px 0 0 0;
   }
   .nosotros_text-container {
     padding: 60px 20px;
