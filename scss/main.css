@@ -27,6 +27,8 @@ body {
 
 .top_recetas_item {
   cursor: pointer;
+  overflow: hidden;
+  text-align: left;
 }
 
 #top-header {
@@ -763,6 +765,7 @@ h5 {
   display: flex;
   align-items: center;
   color: #4f4f4f;
+  overflow-wrap: anywhere;
 }
 
 .top_recetas_info i {
@@ -933,6 +936,17 @@ h5 {
 }
 
 /* Estilos generales para móviles */
+@media (max-width: 1100px) {
+  .top_recetas_image {
+    height: 200px;
+  }
+}
+@media (max-width: 700px) {
+  .top_recetas_image {
+    height: 236px;
+  }
+}
+/* Estilos generales para móviles */
 @media (max-width: 768px) {
   .container,
   .subsection-wrapper {
@@ -1055,9 +1069,6 @@ h5 {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .top_recetas_image {
-    height: 300px;
   }
   .video-section .overlay-text {
     width: 100%;

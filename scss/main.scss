@@ -41,7 +41,9 @@ body {
 }
 
 .top_recetas_item{
-  cursor: pointer
+  cursor: pointer;
+  overflow: hidden;
+  text-align: left;
 }
 
 // Cabecera superior
@@ -838,6 +840,7 @@ $subtitle-2-styles: (
   display: flex;
   align-items: center;
   color: $dark-gray;
+  overflow-wrap: anywhere;
 }
 
 .top_recetas_info i {
@@ -1015,6 +1018,20 @@ $subtitle-2-styles: (
 }
 
 /* Estilos generales para móviles */
+@media (max-width: 1100px) {
+
+  .top_recetas_image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 700px) {
+  .top_recetas_image {
+      height: 236px;
+  }
+}
+
+/* Estilos generales para móviles */
 @media (max-width: 768px) {
   .container,
   .subsection-wrapper {
@@ -1166,7 +1183,7 @@ $subtitle-2-styles: (
   }
 
   .top_recetas_image {
-    height: 300px;
+
   }
 
   .video-section .overlay-text {
