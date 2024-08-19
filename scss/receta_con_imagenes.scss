@@ -1,16 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap");
 
-// Variables de colores
-$background-color: #f9f9f9;
-$primary-color: #642d00;
-$secondary-color: #ff5a00;
-$tertiary-color: #fcb400;
-$quaternary-color: #fcd6c1;
-$black-color: #25252c;
-$dark-gray: #4f4f4f;
-$gray: #c2c2c2;
-$light-gray: #eeeeee;
-$white-color: #fcfcfc;
+@import '../scss/variables';
 
 /* Estructura principal */
 .receta-interna {
@@ -155,8 +145,8 @@ $white-color: #fcfcfc;
   }
   
   .instruccion-numero {
-    background-color: #FF8C00;
-    color: white;
+    background-color: $secondary-color;
+    color: $white-color;
     width: 32px;
     height: 32px;
     display: flex;
@@ -203,9 +193,9 @@ $white-color: #fcfcfc;
   }
   
   .receta-social i {
-    color: #642D00;
+    color: $primary-color;
     font-size: 24px;
-    border: 2px solid #642D00;
+    border: 2px solid $primary-color;
     border-radius: 50%;
     padding: 10px;
     cursor: pointer;
@@ -264,9 +254,9 @@ $white-color: #fcfcfc;
   
   /* Sección Valores Nutricionales */
 .receta-nutricional {
-  background-color: #4A2D19; /* Marrón */
+  background-color: $primary-color; 
   padding: 20px;
-  color: white;
+  color: $white-color;
   margin-top: 20px; /* Separación de la sección anterior */
   border-radius: 16px;
 }
@@ -274,7 +264,7 @@ $white-color: #fcfcfc;
 .receta-nutricional h2 {
   font-size: 24px;
   font-weight: bold;
-  color: white;
+  color: $white-color;
   margin-bottom: 20px;
 }
 
@@ -303,7 +293,7 @@ $white-color: #fcfcfc;
 .nutricional-separador {
   border: 0;
   height: 2pt;
-  background-color: #ffffff;
+  background-color: $white-color;
   margin: 5px 0;
 }
 
@@ -325,14 +315,14 @@ $white-color: #fcfcfc;
 .receta-preparacion h2 {
   font-size: 16px;
   font-weight: 500;
-  color: white;
+  color: $white-color;
   margin-bottom: 10px;
 }
 
 .preparacion-info {
   font-size: 18px;
   font-weight: bold;
-  color: white;
+  color: $white-color;
 }
 
 /* Sección Boletín */
@@ -368,24 +358,24 @@ $white-color: #fcfcfc;
 .boletin-input {
   flex: 1;
   padding: 10px;
-  background-color: white;
+  background-color: $white-color;
   border: none;
   border-radius: 8px;
   font-size: 16px;
-  color: #333;
+  color: $dark-gray;
   margin-right: 10px; /* Espacio entre el input y el botón */
 }
 
 .boletin-input::placeholder {
-  color: #999; /* Placeholder en gris */
+  color: $gray; /* Placeholder en gris */
 }
 
 .boletin-submit {
-  background-color: #4A2D19; /* Marrón */
+  background-color: $primary-color;
   border: none;
   border-radius: 8px;
   padding: 10px 15px;
-  color: white;
+  color: $white-color;
   font-size: 16px;
   display: flex;
   align-items: center;
@@ -399,7 +389,7 @@ $white-color: #fcfcfc;
 
 .boletin-privacidad {
   font-size: 14px;
-  color: #666;
+  color: $black-color;
 }
 
 .ultimas-receta-seccion {

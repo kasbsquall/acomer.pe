@@ -1,16 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap");
 
-// Variables de colores
-$background-color: #f9f9f9;
-$primary-color: #642d00;
-$secondary-color: #ff5a00;
-$tertiary-color: #fcb400;
-$quaternary-color: #fcd6c1;
-$black-color: #25252c;
-$dark-gray: #4f4f4f;
-$gray: #c2c2c2;
-$light-gray: #eeeeee;
-$white-color: #fcfcfc;
+@import '../scss/variables';
 
 /* Estilos para la sección de recetas */
 .recetas-section {
@@ -64,7 +54,8 @@ $white-color: #fcfcfc;
   width: 100%;
   padding: 12px;
   padding-right: 35px;
-  border: 2px solid $primary-color;
+  border: 2px solid;
+  border-color: $primary-color;
   border-radius: 4px;
   font-size: 18px;
 }
@@ -74,14 +65,14 @@ $white-color: #fcfcfc;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: #888;
+  color: $gray;
 }
 
 /* Estilos para el botón de buscar */
 .filtro-boton {
   padding: 10px 20px;
   background-color: $primary-color;
-  color: #fff;
+  color: $white-color;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -147,7 +138,7 @@ $white-color: #fcfcfc;
 .punto {
   width: 15px;
   height: 15px;
-  background-color: #ccc;
+  background-color: $gray;
   border-radius: 50%;
   cursor: pointer;
 }

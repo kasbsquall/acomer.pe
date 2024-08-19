@@ -50,7 +50,8 @@
   width: 100%;
   padding: 12px;
   padding-right: 35px;
-  border: 2px solid #642d00;
+  border: 2px solid;
+  border-color: #642d00;
   border-radius: 4px;
   font-size: 18px;
 }
@@ -60,14 +61,14 @@
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: #888;
+  color: #c2c2c2;
 }
 
 /* Estilos para el botón de buscar */
 .filtro-boton {
   padding: 10px 20px;
   background-color: #642d00;
-  color: #fff;
+  color: #fcfcfc;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -129,7 +130,7 @@
 .punto {
   width: 15px;
   height: 15px;
-  background-color: #ccc;
+  background-color: #c2c2c2;
   border-radius: 50%;
   cursor: pointer;
 }

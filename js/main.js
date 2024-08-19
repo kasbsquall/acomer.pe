@@ -82,63 +82,66 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const subsectionWrapper = document.querySelector(".subsection-wrapper");
 
-  let isDragging = false;
-  let startX;
-  let scrollLeft;
+  // Verifica si el elemento existe antes de activar el script
+  if (subsectionWrapper) {
+    let isDragging = false;
+    let startX;
+    let scrollLeft;
 
-  // Función para manejar el inicio del arrastre
-  const startDragging = (e) => {
-    isDragging = true;
-    startX = e.pageX - subsectionWrapper.offsetLeft;
-    scrollLeft = subsectionWrapper.scrollLeft;
-    subsectionWrapper.style.cursor = "grabbing";
-  };
+    // Función para manejar el inicio del arrastre
+    const startDragging = (e) => {
+      isDragging = true;
+      startX = e.pageX - subsectionWrapper.offsetLeft;
+      scrollLeft = subsectionWrapper.scrollLeft;
+      subsectionWrapper.style.cursor = "grabbing";
+    };
 
-  // Función para manejar el final del arrastre
-  const stopDragging = () => {
-    isDragging = false;
-    subsectionWrapper.style.cursor = "grab";
-  };
+    // Función para manejar el final del arrastre
+    const stopDragging = () => {
+      isDragging = false;
+      subsectionWrapper.style.cursor = "grab";
+    };
 
-  // Función para manejar el movimiento del arrastre
-  const drag = (e) => {
-    if (!isDragging) return;
+    // Función para manejar el movimiento del arrastre
+    const drag = (e) => {
+      if (!isDragging) return;
 
-    e.preventDefault();
+      e.preventDefault();
 
-    const x = e.pageX - subsectionWrapper.offsetLeft;
-    const walk = (x - startX) * 1.5; // Ajusta el factor para suavizar el desplazamiento
-    subsectionWrapper.scrollLeft = scrollLeft - walk;
-  };
+      const x = e.pageX - subsectionWrapper.offsetLeft;
+      const walk = (x - startX) * 1.5; // Ajusta el factor para suavizar el desplazamiento
+      subsectionWrapper.scrollLeft = scrollLeft - walk;
+    };
 
-  // Eventos para el arrastre con el mouse
-  subsectionWrapper.addEventListener("mousedown", startDragging);
-  subsectionWrapper.addEventListener("mouseleave", stopDragging);
-  subsectionWrapper.addEventListener("mouseup", stopDragging);
-  subsectionWrapper.addEventListener("mousemove", drag);
+    // Eventos para el arrastre con el mouse
+    subsectionWrapper.addEventListener("mousedown", startDragging);
+    subsectionWrapper.addEventListener("mouseleave", stopDragging);
+    subsectionWrapper.addEventListener("mouseup", stopDragging);
+    subsectionWrapper.addEventListener("mousemove", drag);
 
-  // Eventos para el arrastre con el dedo en dispositivos táctiles
-  subsectionWrapper.addEventListener("touchstart", (e) => {
-    // Previene el comportamiento predeterminado del desplazamiento táctil
-    e.preventDefault();
-    startX = e.touches[0].pageX - subsectionWrapper.offsetLeft;
-    scrollLeft = subsectionWrapper.scrollLeft;
-    isDragging = true;
-  });
+    // Eventos para el arrastre con el dedo en dispositivos táctiles
+    subsectionWrapper.addEventListener("touchstart", (e) => {
+      // Previene el comportamiento predeterminado del desplazamiento táctil
+      e.preventDefault();
+      startX = e.touches[0].pageX - subsectionWrapper.offsetLeft;
+      scrollLeft = subsectionWrapper.scrollLeft;
+      isDragging = true;
+    });
 
-  subsectionWrapper.addEventListener("touchend", () => {
-    isDragging = false;
-  });
+    subsectionWrapper.addEventListener("touchend", () => {
+      isDragging = false;
+    });
 
-  subsectionWrapper.addEventListener("touchmove", (e) => {
-    if (!isDragging) return;
+    subsectionWrapper.addEventListener("touchmove", (e) => {
+      if (!isDragging) return;
 
-    e.preventDefault();
+      e.preventDefault();
 
-    const x = e.touches[0].pageX - subsectionWrapper.offsetLeft;
-    const walk = (x - startX) * 1.5; // Ajusta el factor para suavizar el desplazamiento
-    subsectionWrapper.scrollLeft = scrollLeft - walk;
-  });
+      const x = e.touches[0].pageX - subsectionWrapper.offsetLeft;
+      const walk = (x - startX) * 1.5; // Ajusta el factor para suavizar el desplazamiento
+      subsectionWrapper.scrollLeft = scrollLeft - walk;
+    });
+  }
 });
 
 //Search container
@@ -191,3 +194,4 @@ document.addEventListener("DOMContentLoaded", () => {
     clearTimeout(hideTimer);
   });
 });
+

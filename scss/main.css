@@ -97,7 +97,7 @@ body {
 }
 
 h1 {
-  color: #000;
+  color: #25252c;
   font-family: "Epilogue", sans-serif;
   font-size: 48px;
   font-style: normal;
@@ -180,7 +180,7 @@ h5 {
 }
 
 .selector-container:hover {
-  border-color: #bbb;
+  border-color: #c2c2c2;
 }
 
 .selector-container i {
@@ -204,7 +204,7 @@ h5 {
   left: 0;
   width: 100%;
   background-color: #fcfcfc;
-  border: 1px solid #ddd;
+  border: 1px solid #c2c2c2;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   list-style: none;
@@ -256,7 +256,8 @@ h5 {
   border-radius: 16px;
   background: #642d00;
   color: #fcfcfc;
-  border: #642d00;
+  border-color: #642d00;
+  border-width: 0;
   cursor: pointer;
 }
 
@@ -424,7 +425,7 @@ h5 {
   }
   .menu-items a:hover,
   .menu-items a.active {
-    color: #ff5a00; /* Color primario */
+    color: #ff5a00;
   }
   .menu-logo {
     display: none;
@@ -668,7 +669,7 @@ h5 {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  color: #fff;
+  color: #fcfcfc;
   font-weight: 800;
   font-size: 20px;
   padding: 10px 10px;
@@ -792,6 +793,12 @@ h5 {
   }
   .top_recetas_grid {
     gap: 10px;
+  }
+  .top_recetas_info span {
+    margin-right: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #25252c;
   }
 }
 @media (max-width: 480px) {
@@ -922,8 +929,8 @@ h5 {
 .boletin_button {
   padding: 10px 20px;
   font-size: 18px;
-  color: #fff;
-  background-color: #642d00; /* Color del botón */
+  color: #fcfcfc;
+  background-color: #642d00;
   border: none;
   font-weight: 700;
   border-radius: 0 5px 5px 0;
@@ -932,7 +939,7 @@ h5 {
 }
 
 .boletin_button:hover {
-  background-color: #25252c; /* Color al hacer hover en el botón */
+  background-color: #25252c;
 }
 
 /* Estilos generales para móviles */
@@ -1019,7 +1026,7 @@ h5 {
   .dropdown-menu {
     width: 100%;
     text-align: center;
-    background-color: #f1f1f1;
+    background-color: #fcfcfc;
   }
   .subtitle-2 {
     text-align: center;
@@ -1142,7 +1149,7 @@ h5 {
 .search-input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #c2c2c2;
   border-radius: 4px;
   font-size: 1rem;
   margin-top: 8px;
@@ -1208,7 +1215,7 @@ h5 {
 /* Estilo del texto para que esté sobre el overlay */
 .pcategories_overlay-text {
   z-index: 2; /* Asegura que el texto esté sobre el overlay */
-  color: white; /* Color del texto para que contraste con el fondo */
+  color: #fcfcfc; /* Color del texto para que contraste con el fondo */
 }
 
 /* Estilos base para el contenedor de la imagen */

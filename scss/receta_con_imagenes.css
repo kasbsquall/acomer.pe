@@ -145,8 +145,8 @@
 }
 
 .instruccion-numero {
-  background-color: #FF8C00;
-  color: white;
+  background-color: #ff5a00;
+  color: #fcfcfc;
   width: 32px;
   height: 32px;
   display: flex;
@@ -193,9 +193,9 @@
 }
 
 .receta-social i {
-  color: #642D00;
+  color: #642d00;
   font-size: 24px;
-  border: 2px solid #642D00;
+  border: 2px solid #642d00;
   border-radius: 50%;
   padding: 10px;
   cursor: pointer;
@@ -246,9 +246,9 @@
 
 /* Sección Valores Nutricionales */
 .receta-nutricional {
-  background-color: #4A2D19; /* Marrón */
+  background-color: #642d00;
   padding: 20px;
-  color: white;
+  color: #fcfcfc;
   margin-top: 20px; /* Separación de la sección anterior */
   border-radius: 16px;
 }
@@ -256,7 +256,7 @@
 .receta-nutricional h2 {
   font-size: 24px;
   font-weight: bold;
-  color: white;
+  color: #fcfcfc;
   margin-bottom: 20px;
 }
 
@@ -285,7 +285,7 @@
 .nutricional-separador {
   border: 0;
   height: 2pt;
-  background-color: #ffffff;
+  background-color: #fcfcfc;
   margin: 5px 0;
 }
 
@@ -307,14 +307,14 @@
 .receta-preparacion h2 {
   font-size: 16px;
   font-weight: 500;
-  color: white;
+  color: #fcfcfc;
   margin-bottom: 10px;
 }
 
 .preparacion-info {
   font-size: 18px;
   font-weight: bold;
-  color: white;
+  color: #fcfcfc;
 }
 
 /* Sección Boletín */
@@ -350,28 +350,28 @@
 .boletin-input {
   flex: 1;
   padding: 10px;
-  background-color: white;
+  background-color: #fcfcfc;
   border: none;
   border-radius: 8px;
   font-size: 16px;
-  color: #333;
+  color: #4f4f4f;
   margin-right: 10px; /* Espacio entre el input y el botón */
 }
 
 .boletin-input::-moz-placeholder {
-  color: #999; /* Placeholder en gris */
+  color: #c2c2c2; /* Placeholder en gris */
 }
 
 .boletin-input::placeholder {
-  color: #999; /* Placeholder en gris */
+  color: #c2c2c2; /* Placeholder en gris */
 }
 
 .boletin-submit {
-  background-color: #4A2D19; /* Marrón */
+  background-color: #642d00;
   border: none;
   border-radius: 8px;
   padding: 10px 15px;
-  color: white;
+  color: #fcfcfc;
   font-size: 16px;
   display: flex;
   align-items: center;
@@ -385,7 +385,7 @@
 
 .boletin-privacidad {
   font-size: 14px;
-  color: #666;
+  color: #25252c;
 }
 
 .ultimas-receta-seccion {

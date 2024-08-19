@@ -1,0 +1,337 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap");
+.about-us {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.about-us h1 {
+  text-align: left;
+  font-size: 32px; /* Ajusta el tamaño del título principal si es necesario */
+  margin-bottom: 40px;
+}
+
+.about-us-content {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.about-us-item {
+  flex: 1;
+  min-width: 250px; /* Ajusta el tamaño mínimo según tu diseño */
+  padding: 20px;
+  background-color: #fcfcfc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.about-us-item h2 {
+  font-size: 24px;
+  color: #642d00; /* Color del título */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.about-us-item p {
+  font-size: 16px;
+  color: #25252c; /* Color del texto */
+  text-align: center;
+}
+
+.about-us-item:hover {
+  background-color: #642d00; /* Fondo marrón en hover */
+  color: #fcfcfc;
+}
+
+.about-us-item:hover h2 {
+  color: #fcfcfc; /* Título blanco en hover */
+}
+
+.about-us-item:hover p {
+  color: #fcfcfc; /* Texto blanco en hover */
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .about-us-content {
+    flex-direction: column;
+  }
+  .about-us-item {
+    width: 100%; /* Cada ítem ocupa el 100% del ancho en pantallas pequeñas */
+  }
+}
+.acomer-nosotros {
+  background-color: #ff5a00; /* Fondo naranja */
+  width: 100%;
+  padding: 20px;
+}
+
+.acomer-nosotros-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.acomer-nosotros-image {
+  flex: 1;
+  max-width: 400px;
+  position: relative;
+  bottom: -100px;
+}
+
+.acomer-nosotros-image img {
+  width: 100%;
+  height: auto; /* Mantiene la proporción de la imagen */
+  max-height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+}
+
+.acomer-nosotros-text {
+  flex: 2;
+  padding-left: 40px;
+  align-content: center;
+}
+
+.acomer-nosotros-text p {
+  font-size: 16px;
+  line-height: 32px;
+  color: #fcfcfc;
+  margin: 0;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .acomer-nosotros-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .acomer-nosotros-image,
+  .acomer-nosotros-text {
+    max-width: 100%;
+  }
+  .acomer-nosotros-text {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+.nuestro-equipo {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 120px 20px 20px 20px;
+}
+
+.nuestro-equipo h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #25252c;
+}
+
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.equipo-item {
+  padding: 20px;
+  background-color: #fcfcfc;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.equipo-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.equipo-item h2 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #642d00;
+  margin-top: 15px;
+}
+
+.equipo-item p {
+  font-size: 16px;
+  color: #4f4f4f;
+  margin-top: 5px;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .equipo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .equipo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.colaborar-section {
+  width: 100%;
+  background-color: #642d00;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.colaborar-content {
+  max-width: 1280px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.colaborar-content h2 {
+  font-size: 40px;
+  font-weight: 800; /* Extra bold */
+  margin-bottom: 20px;
+  color: #fcfcfc;
+}
+
+.colaborar-button {
+  padding: 16px 24px;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 8px;
+  background-color: #ff5a00;
+  color: #fcfcfc; /* Color del texto del botón */
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.awards-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 0 0 0;
+}
+
+.awards-section h1 {
+  text-align: left;
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 40px;
+}
+
+.carousel-item {
+  min-width: calc(33.333% - 40px); /* 3 imágenes en desktop con gap */
+}
+
+.carousel-item img {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-controls button {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fcfcfc;
+  font-size: 20px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.carousel-dots .dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #4f4f4f;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.carousel-dots .dot.active {
+  background-color: #642d00;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-item {
+    min-width: 100%; /* 1 imagen en mobile */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+  }
+  .carousel {
+    gap: 0;
+  }
+  .about-us h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .about-us {
+    padding: 20px;
+  }
+  .acomer-nosotros-image {
+    bottom: 0;
+  }
+  .acomer-nosotros-text {
+    padding: 40px 0;
+  }
+  .acomer-nosotros-text p {
+    line-height: 24px;
+  }
+  .nuestro-equipo {
+    padding: 20px;
+  }
+  .nuestro-equipo h1 {
+    font-size: 24px;
+  }
+  .equipo-item {
+    padding: 0px;
+  }
+  .equipo-grid {
+    gap: 40px;
+  }
+  .colaborar-content h2 {
+    font-size: 32px;
+    padding: 20px;
+    margin-bottom: 0px;
+  }
+  .awards-section h1 {
+    text-align: left;
+    font-size: 24px;
+  }
+  .awards-section {
+    padding: 20px;
+  }
+}/*# sourceMappingURL=nosotros.css.map */

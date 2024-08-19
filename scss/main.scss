@@ -1,17 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap");
 
-// Variables de colores
-$background-color: #f9f9f9;
-$primary-color: #642d00;
-$secondary-color: #ff5a00;
-$secondary-color-opacity: #ff59008c;
-$tertiary-color: #fcb400;
-$quaternary-color: #fcd6c1;
-$black-color: #25252c;
-$dark-gray: #4f4f4f;
-$gray: #c2c2c2;
-$light-gray: #eeeeee;
-$white-color: #fcfcfc;
+@import '../scss/variables';
+
 
 html {
   scroll-behavior: smooth;
@@ -88,7 +78,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0%);
-    color: #fcfcfc;
+    color: $white-color;
     text-align: center;
     font-size: 58px;
     font-weight: 700;
@@ -121,7 +111,7 @@ body {
 
 // Tipografía y estilos de texto
 h1 {
-  color: #000;
+  color: $black-color;
   font-family: "Epilogue", sans-serif;
   font-size: 48px;
   font-style: normal;
@@ -218,7 +208,7 @@ $subtitle-2-styles: (
 }
 
 .selector-container:hover {
-  border-color: #bbb;
+  border-color: $gray;
 }
 
 .selector-container i {
@@ -242,7 +232,7 @@ $subtitle-2-styles: (
   left: 0;
   width: 100%;
   background-color: $white-color;
-  border: 1px solid #ddd;
+  border: 1px solid $gray;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   list-style: none;
@@ -295,7 +285,8 @@ $subtitle-2-styles: (
   border-radius: 16px;
   background: $primary-color;
   color: $white-color;
-  border: $primary-color;
+  border-color: $primary-color;
+  border-width: 0;
   cursor: pointer;
 }
 
@@ -471,7 +462,7 @@ $subtitle-2-styles: (
 
   .menu-items a:hover,
   .menu-items a.active {
-    color: #ff5a00; /* Color primario */
+    color: $secondary-color
   }
 
   .menu-logo {
@@ -736,7 +727,7 @@ $subtitle-2-styles: (
   position: absolute;
   bottom: 10px;
   left: 10px;
-  color: #fff;
+  color: $white-color;
   font-weight: 800;
   font-size: 20px;
   padding: 10px 10px;
@@ -868,6 +859,13 @@ $subtitle-2-styles: (
 
   .top_recetas_grid {
     gap: 10px;
+  }
+
+  .top_recetas_info span {
+    margin-right: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: $black-color;
   }
 }
 
@@ -1004,8 +1002,8 @@ $subtitle-2-styles: (
 .boletin_button {
   padding: 10px 20px;
   font-size: 18px;
-  color: #fff;
-  background-color: $primary-color; /* Color del botón */
+  color: $white-color;
+  background-color: $primary-color;
   border: none;
   font-weight: 700;
   border-radius: 0 5px 5px 0;
@@ -1014,7 +1012,7 @@ $subtitle-2-styles: (
 }
 
 .boletin_button:hover {
-  background-color: $black-color; /* Color al hacer hover en el botón */
+  background-color: $black-color; 
 }
 
 /* Estilos generales para móviles */
@@ -1068,7 +1066,7 @@ $subtitle-2-styles: (
     text-align: left;
     font-size: 20px;
     margin-bottom: 20px;
-    color: #fcfcfc;
+    color: $white-color;
   }
 
   #main-footer .container .social-media {
@@ -1119,7 +1117,7 @@ $subtitle-2-styles: (
   .dropdown-menu {
     width: 100%;
     text-align: center;
-    background-color: #f1f1f1;
+    background-color: $white-color;
   }
 
   .subtitle-2 {
@@ -1238,7 +1236,7 @@ $subtitle-2-styles: (
     align-items: center;
     border-radius: 8px;
     background: $primary-color;
-    color: #fcfcfc;
+    color: $white-color;
     border: $primary-color;
     font-weight: 600;
     font-size: 14px;
@@ -1274,7 +1272,7 @@ $subtitle-2-styles: (
 .search-input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid $gray;
   border-radius: 4px;
   font-size: 1rem;
   margin-top: 8px;
@@ -1342,7 +1340,7 @@ $subtitle-2-styles: (
 /* Estilo del texto para que esté sobre el overlay */
 .pcategories_overlay-text {
   z-index: 2; /* Asegura que el texto esté sobre el overlay */
-  color: white; /* Color del texto para que contraste con el fondo */
+  color: $white-color; /* Color del texto para que contraste con el fondo */
 }
 
 /* Estilos base para el contenedor de la imagen */
