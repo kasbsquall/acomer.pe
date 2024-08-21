@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap");
 
-@import '../scss/variables';
+@import "../scss/variables";
 
 /* Estructura principal */
 .receta-interna {
@@ -238,7 +238,20 @@
   }
 
   .receta-seccion h2 {
-    font-size: 20px;
+    font-size: 16px;
+  }
+
+  .ingrediente-nombre,
+  .ingrediente-cantidad {
+    font-size: 14px;
+  }
+
+  .instruccion-titulo {
+    font-size: 16px;
+  }
+
+  .instruccion-item ul li {
+    font-size: 14px;
   }
 }
 
@@ -440,15 +453,42 @@
   .receta-video {
     padding: 20px;
   }
-  
-  .receta-contenido h1{
-    font-size: 24px;
+
+  .receta-contenido h1 {
+    font-size: 20px;
     margin-top: 10px;
+  }
+
+  .receta-visitas {
+    font-size: 14px;
+  }
+
+  .receta-contenido p {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .video-container {
     height: fit-content;
+  }
+}
+
+@media (max-width: 768px) {
+  .receta-boletin p {
+    font-size: 14px;
+  }
+
+  .receta-nutricional h2 {
+    font-size: 20px;
+  }
+
+  .nutricional-titulo {
+    font-size: 14px;
+  }
+
+  .nutricional-valor {
+    font-size: 14px;
   }
 }

@@ -82,7 +82,7 @@
 /* Estilos responsive */
 @media (max-width: 768px) {
   .recetas-header h1 {
-    font-size: 1.5rem;
+    font-size: 20px;
   }
   .recetas-filtros {
     flex-direction: column;
@@ -92,6 +92,7 @@
   .filtro-input,
   .filtro-boton {
     width: 100%;
+    font-size: 16px;
   }
   .recetas-section {
     padding: 20px;

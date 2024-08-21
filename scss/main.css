@@ -915,7 +915,7 @@ h5 {
 }
 
 .boletin_text p {
-  font-size: 18px;
+  font-size: 16px;
   color: #fcfcfc;
   margin-bottom: 30px;
 }
@@ -983,20 +983,22 @@ h5 {
     line-height: 1.2;
   }
   h1 {
-    font-size: 18px;
+    font-size: 16px;
   }
   h5 {
     font-size: 14px;
   }
   p {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 14px;
   }
   .section-title {
     text-align: left;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 20px;
     color: #fcfcfc;
+  }
+  .subsection p {
+    font-size: 14px;
   }
   #main-footer .container .social-media {
     flex-direction: column;
@@ -1014,7 +1016,16 @@ h5 {
     margin: 0 0;
   }
   .counter .number {
-    font-size: 30px;
+    font-size: 24px;
+  }
+  .label {
+    font-size: 16px;
+  }
+  .pcategories_overlay-text {
+    font-size: 16px;
+  }
+  .nombre_de_plato {
+    font-size: 16px;
   }
   .boletin_section {
     padding: 20px 0px;
@@ -1024,7 +1035,7 @@ h5 {
     font-size: 16px;
   }
   .boletin_text h2 {
-    font-size: 24px;
+    font-size: 22px;
   }
   .boletin_form {
     display: flex;
@@ -1041,6 +1052,7 @@ h5 {
     background-color: #fcfcfc;
   }
   .subtitle-2 {
+    font-size: 16px;
     text-align: center;
   }
   .counter-wrapper {
@@ -1094,7 +1106,7 @@ h5 {
     padding: 0 20px 20px 20px;
   }
   .video-section .overlay-text h1 {
-    font-size: 24px;
+    font-size: 22px;
   }
   .video-section {
     height: 500px;

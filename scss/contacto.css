@@ -120,7 +120,8 @@
   .contact-container {
     flex-direction: column;
   }
-  .contact-left, .contact-right {
+  .contact-left,
+  .contact-right {
     flex: none;
     width: 100%;
     height: auto;
@@ -129,8 +130,11 @@
     padding: 20px;
   }
   .contact-right h1 {
-    font-size: 32px;
+    font-size: 24px;
     line-height: 32px;
+  }
+  .contact-right p {
+    font-size: 14px;
   }
   .contact-left {
     height: 500px;

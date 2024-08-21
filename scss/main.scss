@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap");
 
-@import '../scss/variables';
-
+@import "../scss/variables";
 
 html {
   scroll-behavior: smooth;
@@ -37,7 +36,7 @@ body {
   padding: 0 20px;
 }
 
-.top_recetas_item{
+.top_recetas_item {
   cursor: pointer;
   overflow: hidden;
   text-align: left;
@@ -469,7 +468,7 @@ $subtitle-2-styles: (
 
   .menu-items a:hover,
   .menu-items a.active {
-    color: $secondary-color
+    color: $secondary-color;
   }
 
   .menu-logo {
@@ -511,7 +510,7 @@ $subtitle-2-styles: (
     z-index: 1000;
   }
 
-  .onlymobile{
+  .onlymobile {
     margin-top: 20px;
   }
 
@@ -879,7 +878,7 @@ $subtitle-2-styles: (
     font-size: 24px;
     color: #c2c2c2;
     padding: 0 2px;
-}
+  }
 }
 
 @media (max-width: 480px) {
@@ -989,7 +988,7 @@ $subtitle-2-styles: (
 }
 
 .boletin_text p {
-  font-size: 18px;
+  font-size: 16px;
   color: $white-color;
   margin-bottom: 30px;
 }
@@ -1025,12 +1024,11 @@ $subtitle-2-styles: (
 }
 
 .boletin_button:hover {
-  background-color: $black-color; 
+  background-color: $black-color;
 }
 
 /* Estilos generales para móviles */
 @media (max-width: 1100px) {
-
   .top_recetas_image {
     height: 200px;
   }
@@ -1038,7 +1036,7 @@ $subtitle-2-styles: (
 
 @media (max-width: 700px) {
   .top_recetas_image {
-      height: 236px;
+    height: 236px;
   }
 }
 
@@ -1063,7 +1061,7 @@ $subtitle-2-styles: (
   }
 
   h1 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   h5 {
@@ -1071,15 +1069,18 @@ $subtitle-2-styles: (
   }
 
   p {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 14px;
   }
 
   .section-title {
     text-align: left;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 20px;
     color: $white-color;
+  }
+
+  .subsection p {
+    font-size: 14px;
   }
 
   #main-footer .container .social-media {
@@ -1101,8 +1102,20 @@ $subtitle-2-styles: (
   }
 
   .counter .number {
-    font-size: 30px;
+    font-size: 24px;
   }
+
+  .label {
+    font-size: 16px;
+  }
+
+  .pcategories_overlay-text {
+    font-size: 16px;
+  }
+
+  .nombre_de_plato {
+    font-size: 16px;
+}
 
   .boletin_section {
     padding: 20px 0px;
@@ -1114,7 +1127,7 @@ $subtitle-2-styles: (
   }
 
   .boletin_text h2 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .boletin_form {
@@ -1134,6 +1147,7 @@ $subtitle-2-styles: (
   }
 
   .subtitle-2 {
+    font-size: 16px;
     text-align: center;
   }
 
@@ -1199,7 +1213,7 @@ $subtitle-2-styles: (
   }
 
   .video-section .overlay-text h1 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .video-section {

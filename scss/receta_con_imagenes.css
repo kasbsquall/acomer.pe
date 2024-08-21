@@ -10,6 +10,24 @@
   margin: 0 auto;
 }
 
+.nutricional-valor {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: right;
+}
+
+.nutricional-titulo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.receta-nutricional h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fcfcfc;
+  margin-bottom: 20px;
+}
+
 .receta-contenido {
   flex: 2 2 0;
 }
@@ -215,9 +233,29 @@
     flex-direction: column;
     padding: 40px 20px 0px 20px;
   }
+  .receta-seccion h2 {
+    font-size: 14px;
+  }
+  .nutricional-valor {
+    font-size: 16px;
+  }
+  .nutricional-titulo {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .receta-contenido h1 {
+    font-size: 24px;
+  }
+  .receta-visitas {
+    font-size: 16px;
+  }
   .receta-contenido,
   .receta-compartir {
     flex: 1 1 100%;
+  }
+  .receta-contenido p {
+    font-size: 14px;
+    line-height: 20px;
   }
   .receta-imagen-principal img {
     border-radius: 16px;
@@ -232,8 +270,19 @@
     font-size: 18px !important;
     margin-bottom: 0px !important;
   }
-  .receta-seccion h2 {
+  .receta-nutricional h2 {
     font-size: 20px;
+  }
+  .receta-seccion {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  .instruccion-titulo {
+    font-size: 16px;
+  }
+  .ingrediente-nombre,
+  .ingrediente-cantidad {
+    font-size: 14px;
   }
 }
 .receta_int_widget {
@@ -253,13 +302,6 @@
   border-radius: 16px;
 }
 
-.receta-nutricional h2 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #fcfcfc;
-  margin-bottom: 20px;
-}
-
 .nutricional-info {
   display: flex;
   flex-direction: column;
@@ -269,17 +311,6 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
-}
-
-.nutricional-titulo {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.nutricional-valor {
-  font-size: 18px;
-  font-weight: 500;
-  text-align: right;
 }
 
 .nutricional-separador {
@@ -408,4 +439,10 @@
 .otrasrecetas h1 {
   font-size: 36px;
   margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .receta-boletin p {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=receta_con_imagenes.css.map */
